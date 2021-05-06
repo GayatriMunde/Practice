@@ -17,11 +17,25 @@ def getNthPalindrome(n: int, start: int) -> int:
     while (not isPalindrome(start + 1)):
         start += 1
 
-    return getNthPalindrome(a, n - 1, start + 1)
+    return getNthPalindrome(n - 1, start + 1)
 
 if __name__ == '__main__':        
-    num = eval(input('Enter Number: '))
+    num = eval(input('Enter a Number: '))
     n = eval(input('Enter nth position: '))
-    print(getNthPalindrome(0, n, num))
+    print(getNthPalindrome(n, num))
 
-    
+"""
+Sample Case:
+Example 1:
+Enter a number: 12021
+Enter nth position: 10
+13031
+	
+Example 2:
+Enter a number: 141
+Enter nth position: 5
+191
+	
+Time Complexity: O()
+Space Complexity: O(1)
+"""
