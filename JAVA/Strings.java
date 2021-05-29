@@ -9,7 +9,6 @@ public class Strings{
         System.out.println("Weasly King is: " + name + " " + surname);
 
 
-        /*
         //User Input
         Scanner io = new Scanner(System.in);
         System.out.print("Enter the full name of brightest witch: ");
@@ -20,7 +19,10 @@ public class Strings{
         String fullName = io.next(); //Reads till white space only
         System.out.println("The name you entered is: " + fullName);
         System.out.println("But you are supposed to enter full name.");
-        */
+        
+
+        //Escape Sequence Characters
+        //newline: \n, tab: \t, quote: \', backslash: \\
 
 
         //String Methods
@@ -50,17 +52,35 @@ public class Strings{
 
         //Declaration: boolean startsWith(String str)
         //Returns whether it starts with str
-        System.out.println("Does Ronald starts with Ro: " + name.startsWith("Ro") );
+        System.out.println("Does Ronald starts with Ro: " + name.startsWith("Ro") ); //op: true
 
         //Declaration: boolean endsWith(String str)
         //Returns whether it endss with str
-        System.out.println("Does Ronald ends with R: " + name.endsWith("R") );
+        System.out.println("Does Ronald ends with R: " + name.endsWith("R") ); //op: false
     
         //Declaration: char charAt(int idx)
         //Returns the character present at index idx
-        System.out.println("Char at index 3 in Hermione is: " + "Hermione".charAt(3));
+        System.out.println("Char at index 3 in Hermione is: " + "Hermione".charAt(3)); //op: r
 
-        //
+        //Declaration1: int indexOf(string str)
+        //Returns the first occurance of str else -1
+        System.out.println("Index of r in Harry: " + "Harry".indexOf("r")); //op: 2
+
+        //Declaration2: int indexOf(string str, int fromIdx)
+        //Returns the first occurance of str starting from index fromIdx else -1
+        System.out.println("Index of r in Haryry: " + "Haryry".indexOf("ry", 3)); //op: 4
+
+        //Declaration: int lastIndexOf(string str)
+        //Returns the last occurance of str
+        System.out.println("Index of r in Haryryry: " + "Haryryry".lastIndexOf("ry")); //op: 6
+
+        //Declaration: bool equals(string str)
+        //Returns whether both strings are equal(Case sensitive)
+        System.out.println("Is Harry equals to harry: " + "Harry".equals("harry")); //op: false
+
+        //Declaration: bool equals(string str)
+        //Returns whether both strings are equal(Not case sensitive)
+        System.out.println("Is Harry equals to haRrY: " + "Harry".equalsIgnoreCase("haRrY")); //op: true
 
     }
 }
