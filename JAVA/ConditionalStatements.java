@@ -15,7 +15,6 @@ public class ConditionalStatements{
 
 
         //Switch case
-        //break is used to break the lopp
         //without break it'll execute every statement after true cond.
         int idx = 1;
         switch(idx){
